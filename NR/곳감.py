@@ -21,9 +21,9 @@ for i in range(m):
         cnt=0
         while cnt <c :
             tmp = graph[a-1].pop()
-            graph[a-1].append(tmp)
+            graph[a-1].insert(0,tmp)
             cnt+=1
-
+print(graph)
 i =0
 j = n
 k =0
@@ -31,7 +31,7 @@ answer = 0
 while k < n:
 
     answer += sum(graph[k][i:j])
-    if k<= n//2:
+    if k< n//2:
         i+=1
         j-=1
         k+=1
